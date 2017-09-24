@@ -1,0 +1,24 @@
+{
+  "name": "iota_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "curl.lib.js": "1.0.15",
+    "express": "^4.15.4",
+    "iota.lib.js": "^0.4.0",
+    "jquery": "^3.2.1",
+    "pug": "^2.0.0-rc.4",
+    "showdown": "^1.7.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}

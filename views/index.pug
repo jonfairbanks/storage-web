@@ -1,0 +1,58 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='./static/css/bootstrap.css')
+    script(src='./static/iota.min.js')
+    script(src='./static/curl.min.js')
+    script(src='./static/jquery.min.js')
+    script(src='./static/js/bootstrap.min.js')
+    script(src='./static/main.js')
+  body
+   
+    div(style="width:800px; margin:50 auto;")
+      div(class="panel panel-info")
+        div(class="panel-heading")
+          | Info
+        div(class="panel-body")
+          | For large files you need to submit a lot of transactions, this is recommended only for small/tiny files up to 200kb
+        div(class="panel-footer")          
+          span(class="glyphicon glyphicon-envelope")
+            a(href="mailto:iotastorage@gmail.com" target="_top")
+              | iotastorage@gmail.com
+          br 
+          img.image(src='./static/GitHub-Mark-32px.png', width="16")
+          a(href="https://github.com/iota-storage/storage-web" target="_top")
+            | Github
+        
+      div(class='input-group')
+        input(id='filename' class='form-control', type='text', disabled='disabled')
+        span(class='input-group-btn')
+          label(id ='select' class='btn btn-default btn-success')
+            input(id='uploadBtn', type='file', class='btn btn-success', style='display: none')
+            | Browse 
+          button(id='clear',class='btn btn-success', style='display: none')
+            | Clear
+          button(id='upload',class='btn btn-success', style='display: none')
+            | Upload
+      div(style="margin: 25px")
+        div(id='progress-field', class='progress progress-bar-striped active' , style='display: none')          
+          div( id='bar', class='progress-bar progress-bar-success  progress-bar-striped active', role='progressbar', aria-valuemin=0, aria-valuemax=100, aria-valuenow=0, style="width: 0%")
+          div( id='barbg', class='bg progress-bar rogress-bar-info  progress-bar-striped active', role='progressbar', aria-valuemin=0, aria-valuemax=100, aria-valuenow=0, style="width: 100%")
+            | Starting Proof of Work
+        
+      div(id='result_field' , style='display:none')      
+        div(class='input-group', style="margin: 25px")
+          input( id='result' class='form-control', type='text', readonly=true)
+          span(class='input-group-btn')
+            button(id='copy',class='btn btn-success')
+              | Copy
+      div(id='error_panel' class="panel panel-danger" , style='display:none')
+        div(class="panel-heading")
+          | Error
+        div(id='error' class="panel-body")
+
+        div(class="panel-footer")
+          font(font size="-3")
+            a(href="mailto:iotastorage@gmail.com" target="_top")
+              | iotastorage@gmail.com
+    

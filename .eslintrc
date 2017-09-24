@@ -1,0 +1,11 @@
+{
+  "extends": "google",
+  "rules": {
+    // Additional, per-project rules...
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}
