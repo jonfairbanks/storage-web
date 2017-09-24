@@ -133,7 +133,7 @@ function createSeed() {
  */
 function sendTransactions(txs, seed) {
   return new Promise(function(resolve, reject) {
-    iota.api.sendTransfer(seed, 4, 15, txs, function(error, transaction) {
+    iota.api.sendTransfer(seed, 4, 14, txs, function(error, transaction) {
       if (error) {
         reject(error);
       } else {
