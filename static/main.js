@@ -1,6 +1,7 @@
 
-const CURL = window.curl;
 const IOTA = window.IOTA;
+const CURL = window.curl;
+CURL.init();
 const MAX_TRYTES = 2187;
 const oldLog = console.log;
 
@@ -14,8 +15,7 @@ let totalPows = 0;
 let seed = createSeed();
 
 let iota = new IOTA({
-  host: 'http://iota.bitfinex.com',
-  port: 80,
+  provider: 'http://52.212.5.10:14265',
 });
 
 CURL.overrideAttachToTangle(iota.api);
@@ -26,7 +26,7 @@ CURL.overrideAttachToTangle(iota.api);
  * @param {Object} msg 
  */
 function logProxy(msg) {
-  if (msg.includes('got PoW!')) {
+  if (msg.toString().includes('got PoW!')) {
     pows += 1;
     makeProgress((100 * (pows / totalPows)).toFixed(2));
   }
@@ -133,7 +133,7 @@ function createSeed() {
  */
 function sendTransactions(txs, seed) {
   return new Promise(function(resolve, reject) {
-    iota.api.sendTransfer(seed, 4, 14, txs, function(error, transaction) {
+    iota.api.sendTransfer(seed, 4, 15, txs, function(error, transaction) {
       if (error) {
         reject(error);
       } else {

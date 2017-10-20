@@ -10,15 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "curl.lib.js": "1.0.15",
     "express": "^4.15.4",
-    "iota.lib.js": "^0.4.0",
+    "iota.lib.js": "^0.4.1",
     "jquery": "^3.2.1",
     "pug": "^2.0.0-rc.4",
     "showdown": "^1.7.4"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "curl.lib.js": "^1.0.22",
     "eslint": "^4.7.0",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }

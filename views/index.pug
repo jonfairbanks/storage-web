@@ -15,6 +15,9 @@ html
           | Info
         div(class="panel-body")
           | For large files you need to submit a lot of transactions, this is recommended only for small/tiny files up to 200kb
+          div()
+            b()
+              | Note: Proof of work via curl.lib.js is currently broken (invalid transaction hash)
         div(class="panel-footer")          
           span(class="glyphicon glyphicon-envelope")
             a(href="mailto:iotastorage@gmail.com" target="_top")
@@ -23,6 +26,7 @@ html
           img.image(src='./static/GitHub-Mark-32px.png', width="16")
           a(href="https://github.com/iota-storage/storage-web" target="_top")
             | Github
+          
         
       div(class='input-group')
         input(id='filename' class='form-control', type='text', disabled='disabled')

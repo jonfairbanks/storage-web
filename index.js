@@ -5,9 +5,9 @@ const path = require('path');
 app.use('/static', express.static(
   path.join(__dirname, 'node_modules/iota.lib.js/dist'))
 );
-app.use('/static', express.static(
-  path.join(__dirname, 'node_modules/curl.lib.js/dist'))
-);
+// app.use('/static', express.static(
+//   path.join(__dirname, 'node_modules/curl.lib.js/dist'))
+// );
 app.use('/static', express.static(
   path.join(__dirname, 'node_modules/bootstrap/dist'))
 );
