@@ -1,7 +1,7 @@
 
-iota = new window.IOTA({
-  host: 'http://iota.bitfinex.com',
-  port: 80,
+
+let iota = new IOTA({
+  provider: 'http://node.lukaseder.de:14265',
 });
 
 /**
